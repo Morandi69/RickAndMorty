@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/portal"
+    >
+    <LinearLayout
+        android:id="@+id/searchField"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_linear"
+        android:layout_margin="15dp">
+        <ImageView
+            android:id="@+id/imageViewEmail"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@drawable/search"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"/>
+        <EditText
+            android:id="@+id/search_text"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:textSize="24dp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="2"
+        android:paddingLeft="5dp"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/searchField"/>
+
+
+
+</RelativeLayout>
